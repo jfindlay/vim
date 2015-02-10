@@ -1,0 +1,45 @@
+Navigate below (h,j,k,l, then i) this line and type a sentence about how vim is an
+excellent editor.
+
+-------------------------------------------------------------------------------
+I like vim because 
+-------------------------------------------------------------------------------
+
+Now exit insert mode (<ESC> or <CTRL>[) and save the buffer to the file
+(:w<CR>).  Undo your sentence insert (u) and then redo (<CTRL>r) it.  With
+several edits in the buffer history you can watch the file evolve over time
+edit by edit either forward in time (<CTRL>r) or backward in time (u).
+
+Copy the sentence (either Vy or yy) you've made above and paste it between the
+two lines below, (p or P as necessary).
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+Now delete the line again using dd or Vd.
+
+Copy (yy) and paste (p) the following text 4 times.
+
+-------------------------------------------------------------------------------
+I like vim because
+-------------------------------------------------------------------------------
+
+Now block select (navigate to upper left corner of the block, <CTRL>V,
+navigate to lower left corner of the block, then <END>) and cut (x) the
+following text and paste it at the end of the 5 lines above.
+
+-------------------------------------------------------------------------------
+ vim is cool.
+ vim is hot.
+ vim is quirky.
+ non sequitur.
+ 42.
+-------------------------------------------------------------------------------
+
+Navigate to the beginning of the file (gg) and advance word by word (w).  Now
+try the same thing with W, b, and B.
+
+Perform a global search of the word Now (/Now).  Replace all occurrences with
+Then (:%s/Now/Then/gc).  Undo this replacement (u as necessary).  Clear the
+active highlight (:nohl).
+

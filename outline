@@ -1,0 +1,100 @@
+HOWTO vim:
+  - simple commands:
+    - cursor navigation:
+      hjkl -> left, down, up, right
+      :n   -> jump to line n
+    - insert:
+      i -> insert here
+    - undo (redo):
+      u -> undo
+      <ctrl>r -> redo
+    - search (replace):
+      / -> search
+      ? -> reverse search
+    - copy:
+      y  -> copy (yank) selection
+      yy -> yank this line
+    - cut:
+      x or d -> cut
+      dd     -> delete this line
+    - paste:
+      p -> paste after cursor (line)
+      P -> paste before cursor (line)
+    - save
+      :w<CR>
+      :w!<CR>
+    - exit
+      :q<CR>
+      :wq<CR>
+    - help
+      :h {topic}<CR>
+  - modes:
+    - normal
+      - default mode; you generally must be in this mode to go into others
+      - allows vim to have simple command keys withough needing excessive modifiers like emacs or GUI-based editors
+    - insert:
+      i -> insert here
+      a -> insert after cursor
+      I -> insert at beginning of this line
+      A -> insert at end of this line
+      o -> create new line after this line and insert
+      O -> create new line before this line and insert
+      <esc> or <ctrl>[ -> exit insert mode
+    - visual:
+      - normal:
+        v
+      - line
+        V
+      - block
+        <CTRL>v
+  - more commands:
+    - navigation:
+      gg -> buffer top
+      G  -> buffer bottom
+      0  -> line beginning
+      w  -> next word
+      W  -> next Word
+      b  -> back word
+      B  -> Back word
+    - search (replace):
+      /      -> search
+      ?      -> reverse search
+      *      -> next occurrence of this word
+      #      -> previous occurrence of this word
+      n      -> next search result
+      :s///  -> search and replace on current line
+      :%s/// -> search and replace in whole buffer
+      :nohl  -> clear active highlight
+  - command arguments:
+    - directions
+    - ranges
+    - repeats
+  - context navigation:
+    - buffers
+      :buffers or :ls -> lists buffers
+      :buffer N       -> open buffer N in active window
+    - windows
+      :split              -> horizontal split
+      :vsplit             -> vertical split
+      <CTRL>w w           -> next window
+      <CTRL>w {direction} -> window in that direction
+    - tabs
+      :tabnew -> new tab
+      gt      -> next tab
+      gT      -> previous tab
+  - configuration:
+    - config file:
+      - spelling
+      - tab completion
+      - syntax comprehension:
+        - highlight
+        - folding
+        - errors
+    - extensibility
+    - plugins:
+      - pathogen:
+        - nerdtree
+        - tagbar
+        - ctrl-p
+        - eregex
+      - git-based rc
